@@ -1,0 +1,646 @@
+:root {
+    --primary: #7A9A7E;       /* Verde Sálvia */
+    --primary-dark: #5F7A62;
+    --accent: #D4AF37;        /* Dourado */
+    --bg-light: #F4F7F4;
+    --white: #f1edec;
+    --text-dark: #333333;
+    --grey: #555555;
+    --whatsapp: #3c4d39;
+}
+
+* { margin: 0; padding: 0; box-sizing: border_box; }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    
+    background-color: var(--bg-light);
+    
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+img { max-width: 100%; display: block; }
+
+/* HERO SECTION */
+.hero {
+    background-color: var(--white);
+    padding: 40px 0;
+    text-align: center;
+    text-decoration: none
+
+}
+
+.logo-area img {
+    max-width: 250px;
+    margin: 0 auto 20px;
+}
+
+.badge-vip {
+    background: #3c4d39;
+    color: var(--white);
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    color: var(--primary-dark);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text {
+    font-size: 1.2rem;
+    color: var(--grey);
+    margin-bottom: 25px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Botão CTA */
+.btn-cta {
+    display: inline-block;
+    background-color: var(--whatsapp);
+    color: var(--white);
+    text-decoration: none;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+    transition: transform 0.2s;
+}
+.btn-cta:hover { transform: scale(1.05); }
+
+.pulse { animation: pulse 2s infinite; }
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+/* VÍDEO WRAPPER */
+.video-wrapper {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    background: #000;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+.video-label {
+    color: var(--grey);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.main-video {
+    width: 100%;
+    display: block;
+}
+
+/* SHOWCASES / GALERIA */
+.showcase { padding: 60px 0; }
+.bg-light { background-color: var(--white); }
+
+
+
+.section-title2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 30;          /* ⭐ o segredo */
+    font-size: 1.7rem;
+    letter-spacing: 1px;       /* ⭐ o segredo */
+    text-align: center;
+    color: black;
+    margin-top: 50px;
+}
+
+.gallery-grop{
+    display: grid;
+   grid-template-columns: 1fr auto;  /* coluna direita controlada */
+    gap: 20px;
+    align-items: start;
+}
+
+/* lado esquerdo (imagens grandes) */
+.gallery-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 500px;
+    justify-content: center;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.gallery-item2 img{
+    width: 500px;
+    height: 600px;
+    justify-content: center;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* lado direito (imagens pequenas) */
+.galery-min{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    min-width: auto;
+     justify-items: stretch; /* ⭐ ISSO CENTRALIZA */
+}
+
+.galery-min img{
+    width: 200px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
+    margin: 0 auto;          /* ⭐ GARANTIA EXTRA */
+}
+
+.showcase2 .container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;   /* CENTRALIZA TUDO DENTRO */
+}
+
+
+.feedback-banner{
+    width: 500px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.gallery-grid2{ display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+ }
+.gallery-grid2 a {
+justify-content: center;
+}
+
+.gallery-grid3{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.gallery-item3 img{
+    width: 700px;
+    height: 600px;
+    justify-content: center;
+    object-fit: cover;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.feedback {
+    padding: 40px 20px;
+    background-color: #f4f1ea; /* Cor de fundo similar à imagem */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilo do Texto */
+.feedback-header {
+    text-align: center;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title4 {
+    font-family:'Montserrat', sans-serif; /* Ajuste para sua fonte */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 400;
+}
+
+/* Galeria Masonry (Colunas) */
+.gallery-grid-feedback {
+    column-count: 3; /* Cria 3 colunas como na foto */
+    column-gap: 20px; /* Espaço entre as colunas */
+}
+
+/* As imagens (Prints) */
+.print-wpp {
+    width: 100%;
+    height: auto; /* IMPORTANTE: Mantém a proporção real da imagem */
+    display: block;
+    border-radius: 15px; /* Arredondamento */
+    margin-bottom: 20px; /* Espaço inferior entre uma imagem e outra */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra suave */
+    transition: transform 0.3s ease;
+    
+    /* Evita que a imagem seja cortada entre colunas */
+    break-inside: avoid; 
+    -webkit-column-break-inside: avoid;
+}
+
+/* Efeito ao passar o mouse (Opcional) */
+.print-wpp:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    justify-content: center;
+    align-items: center;
+}
+/* BENEFÍCIOS */
+/* Container e Fundo */
+.benefits {
+    padding: 50px 20px;
+    background-color: #f0ece6; /* Cor de fundo clarinha da imagem */
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.section-title {
+    color: #333;
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 50px;
+    font-weight: 800;
+}
+.section-title3 {
+    color: #333;
+    font-size: 34px;
+    margin-bottom: 5px;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+/* FRETE GRÁTIS */
+.frete-title {
+    text-transform: uppercase;
+    color: #333;
+    font-size: 25px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+/* Etiquetas de Frete (Pills) */
+.shipping-pills-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.shipping-pill {
+    display: inline-flex;
+    border-radius: 50px; /* Deixa arredondado */
+    overflow: hidden;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.pill-local {
+    background-color: #1b2e23; /* Verde escuro */
+    color: #fff;
+    padding: 10px 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.pill-value {
+    background-color: #cbbcc6; /* Lilás/Cinza da imagem */
+    color: #333;
+    padding: 10px 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícones centrais */
+.benefits-icons {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.benefit-item {
+    max-width: 200px;
+}
+
+.benefit-item h3 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* Estilo dos ícones */
+.icon-circle {
+    position: relative;
+    font-size: 50px;
+    color: #3e4d44; /* Verde musgo */
+    display: inline-block;
+}
+
+.icon-flat {
+    font-size: 50px;
+    color: #3e4d44;
+}
+.benefit-item img {
+    width: 100px;
+    height: 100px;
+}
+
+/* BOTÃO WHATSAPP VIP */
+.cta-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+/* O Botão Verde Escuro */
+.btn-vip {
+    background-color: #3e4d44; /* Verde musgo */
+    color: white;
+    text-decoration: none;
+    display: inline-flex; /* Mantém itens lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center;
+    padding: 8px 25px 8px 10px; /* Padding ajustado */
+    border-radius: 50px; /* Borda redonda */
+    transition: transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    max-width: 90%; /* Evita que estoure em telas pequenas */
+}
+
+.btn-vip:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* A caixa onde fica a imagem */
+.icon-box {
+    width: 55px; /* Tamanho fixo da bolinha/área da imagem */
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espaço entre a imagem e o texto */
+}
+
+/* Controla o tamanho da imagem do WhatsApp para não ficar gigante */
+.icon-box img {
+    width: 200px; 
+    height: 200px;
+    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+}
+
+/* O Texto do botão */
+.text-btn {
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.text-btn i {
+    margin-left: 5px;
+    color: #FFD700; /* Cor do cadeado dourado */
+}
+
+/* SILVER INFO */
+.silver-info { padding: 80px 0; background: var(--white); }
+.split-content { display: flex; align-items: center; gap: 40px; }
+.text-area { flex: 1; }
+.text-area h2 { color: var(--primary-dark); margin-bottom: 20px; }
+.quote {
+    font-style: italic;
+    color: var(--accent);
+    font-weight: 700;
+    margin-top: 20px;
+    border-left: 4px solid var(--accent);
+    padding-left: 15px;
+}
+.img-area { flex: 1; }
+.img-area img { border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+
+/* FEEDBACK */
+.feedback { padding: 60px 0; background-color: var(--bg-light); }
+.print-wpp { border-radius: 10px; border: 1px solid #ddd; }
+
+/* FAQ */
+.faq { padding: 6px 0; background: #F4F7F4;margin-bottom: 10px;
+
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;   /* CENTRALIZA TUDO DENTRO */
+    a{
+        margin-top: 50px;
+    }
+} 
+.faq-item {
+    background: var(--whitet);
+    padding: 20px;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border-left: 5px solid black;
+}
+.faq-item h3 { color: black; font-size: 1.1rem; margin-bottom: 10px; }
+.faq-item p { font-size: 0.95rem; color: black; }
+
+/* FOOTER */
+/* Configuração Geral do Footer */
+footer {
+    background-color: #ffffff; /* Fundo branco */
+    color: #555; /* Texto cinza escuro */
+    padding-top: 50px;
+    text-align: center;
+    font-family: sans-serif; /* Ajuste para sua fonte */
+}
+
+.container {
+    max-width: 1200px; /* Limita a largura para ficar centralizado bonitinho */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Título SOBRE NÓS */
+.footer-title {
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    color: #222;
+    margin-bottom: 20px;
+
+}
+
+.footer-title a, 
+a {
+    color: #006666; /* Substitua pela cor verde/azulada do seu layout */
+   
+}
+
+
+
+/* Logo */
+.footer-logo{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+.footer-logo img {
+    max-width: 170px; /* Tamanho da logo */
+    height: auto;
+    border-radius: 50%; /* Garante que fique redonda se a imagem for quadrada */
+    border: 1px solid #eee; /* Borda sutil opcional */
+    margin-bottom: 20px;
+}
+
+/* Texto descritivo */
+.about-footer p {
+    font-size: 19px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+/* Linha pontilhada (Divider) */
+.footer-divider {
+    border-top: 2px dashed #ccc;
+    width: 60%;
+    margin: 20px auto;
+}
+
+/* Destaques (Verde Petróleo) */
+.trust-icons {
+    display: flex;
+    flex-direction: column; /* Um embaixo do outro */
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #1b5e53; /* Cor verde da imagem */
+}
+
+.trust-item i {
+    margin-right: 5px;
+    font-size: 14px;
+}
+
+/* Ícones Sociais */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.social-icons a {
+    background-color: #383838; /* Fundo cinza chumbo */
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Faz virar bolinha */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    text-decoration: none;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.social-icons img{
+    width: 27px;
+    height: 27px;
+}
+.social-icons a:hover {
+    background-color: #1b5e53; /* Fica verde ao passar o mouse */
+    transform: translateY(-3px);
+}
+
+/* Barra de Copyright Preta */
+.copyright-bar {
+    background-color: #000000;
+    color: #fff;
+    padding: 15px 0;
+    width: 100%;
+}
+
+.copyright-bar p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .split-content { flex-direction: column; }
+    .hero h1 { font-size: 2rem; }
+    .benefit-box { width: 100%; }
+
+    /* Faz as colunas ficarem uma embaixo da outra no celular */
+    
+    .gallery-grop, 
+    .gallery-grid, 
+    .gallery-grid2 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .gallery-grid3 {
+        flex-wrap: wrap; /* Permite quebrar linha */
+    }
+
+    /* Ajuste específico para a galeria lateral no celular */
+    .galery-min {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Fica lado a lado no celular */
+        gap: 10px;
+        width: 100%;
+    }
+}
