@@ -145,27 +145,25 @@ img { max-width: 100%; display: block; }
     margin-top: 50px;
 }
 
-.gallery-grop{
+.gallery-grop {
     display: grid;
-   grid-template-columns: 1fr auto;  /* coluna direita controlada */
+    grid-template-columns: 1fr 1fr; /* Divide a tela em duas metades no PC */
     gap: 20px;
-    align-items: start;
+    margin-bottom: 40px;
 }
 
 /* lado esquerdo (imagens grandes) */
-.gallery-grid{
+.gallery-grid, .galery-min {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr; /* 2 fotos lado a lado dentro de cada metade */
+    gap: 15px;
 }
 
-.gallery-item img{
+.gallery-item img, .gallery-itemm-min img {
     width: 100%;
-    height: 500px;
-    justify-content: center;
+    height: 350px;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 .gallery-item2 img{
@@ -179,13 +177,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* lado direito (imagens pequenas) */
-.galery-min{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    min-width: auto;
-     justify-items: stretch; /* ⭐ ISSO CENTRALIZA */
-}
+
 
 .galery-min img{
     width: 200px;
@@ -205,10 +197,12 @@ img { max-width: 100%; display: block; }
 }
 
 
-.feedback-banner{
-    width: 500px;
-    height: 200px;
-    object-fit: contain;
+feedback-banner {
+    width: 100%;
+    max-width: 300px; /* Evita que fique gigante no PC */
+    height: auto;
+    display: block;
+    margin: 0 auto 30px auto; /* Centraliza perfeitamente */
 }
 
 .gallery-grid2{ display: grid; 
@@ -219,21 +213,19 @@ img { max-width: 100%; display: block; }
 justify-content: center;
 }
 
-.gallery-grid3{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    
+.gallery-grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas bonitas no PC */
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.gallery-item3 img{
-    width: 700px;
-    height: 600px;
-    justify-content: center;
+.gallery-item3 img {
+    width: 100%;
+    height: 350px; /* Altura padrão no PC */
     object-fit: cover;
-    margin-bottom: 30px;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 .feedback {
     padding: 40px 20px;
@@ -414,19 +406,7 @@ justify-content: center;
 }
 
 /* O Botão Verde Escuro */
-.btn-vip {
-    background-color: #3e4d44; /* Verde musgo */
-    color: white;
-    text-decoration: none;
-    display: inline-flex; /* Mantém itens lado a lado */
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center;
-    padding: 8px 25px 8px 10px; /* Padding ajustado */
-    border-radius: 50px; /* Borda redonda */
-    transition: transform 0.2s;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    max-width: 90%; /* Evita que estoure em telas pequenas */
-}
+
 
 .btn-vip:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
@@ -434,19 +414,31 @@ justify-content: center;
 
 /* A caixa onde fica a imagem */
 .icon-box {
-    width: 55px; /* Tamanho fixo da bolinha/área da imagem */
-    height: 45px;
+    width: 35px; /* Tamanho fixo da bolinha */
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 15px; /* Espaço entre a imagem e o texto */
+    margin-right: 12px; 
 }
 
-/* Controla o tamanho da imagem do WhatsApp para não ficar gigante */
 .icon-box img {
-    width: 200px; 
-    height: 200px;
-    object-fit: contain; /* Garante que a imagem caiba sem distorcer */
+    width: 100% !important; 
+    height: 100% !important;
+    object-fit: contain; 
+}
+
+.btn-vip {
+    background-color: #3e4d44;
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 25px; 
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.2s;
 }
 
 /* O Texto do botão */
@@ -632,29 +624,48 @@ a {
     font-weight: 700;
 }
 /* Responsividade */
+/* Responsividade - Ajustes para Celular */
+/* --- RESPONSIVIDADE PARA CELULAR (Aprovado pela cliente) --- */
 @media (max-width: 768px) {
-    .split-content { flex-direction: column; }
-    .hero h1 { font-size: 2rem; }
-    .benefit-box { width: 100%; }
-
-    /* Faz as colunas ficarem uma embaixo da outra no celular */
-    
-    .gallery-grop, 
-    .gallery-grid, 
-    .gallery-grid2 {
-        display: flex;
-        flex-direction: column;
+    /* Galeria Inicial: Uma embaixo da outra */
+    .gallery-grop {
+        grid-template-columns: 1fr; 
     }
 
+    /* As 6 ofertas: 3 por linha no celular */
     .gallery-grid3 {
-        flex-wrap: wrap; /* Permite quebrar linha */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .gallery-item3 img {
+        height: 120px; /* Altura quadradinha estilo feed do Instagram */
     }
 
-    /* Ajuste específico para a galeria lateral no celular */
-    .galery-min {
-        display: grid;
-        grid-template-columns: 1fr 1fr; /* Fica lado a lado no celular */
-        gap: 10px;
-        width: 100%;
+    /* Feedbacks da cliente (Prints): 3 por linha no celular */
+    .gallery-grid2, .gallery-grid-feedback {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        margin-bottom: 10px !important;
+        gap: 5px !important;
+    }
+    .gallery-item2 img, .print-wpp {
+        height: auto; /* Deixa a altura natural do print */
+        margin-bottom: 5px;
+    }
+    .galery-min img {
+        height: 250px; /* Deixa as imagens pequenas mais compactas no celular */
+        width: auto; /* Mantém a proporção */
+    }
+    /* Ajuste do botão VIP para não vazar a tela */
+    .btn-vip {
+        width: 100%; 
+        max-width: 320px;
+        font-size: 12px; /* Diminui a letra um pouco pra caber tudo */
+    }
+    .feedback-banner{
+        max-width: 100%; /* Garante que a imagem do banner não vaze a tela */
+        height: auto;
+        width: 500px;
+        margin-right: 30px;
     }
 }
